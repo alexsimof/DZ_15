@@ -16,6 +16,20 @@
 
 <body>
   <header class="header">
+    <div class="header-panel">
+      <div class="header-contact">
+        <a href="tel:(225) 555-0118" class="header-phone">(225) 555-0118</a>
+        <a href="mailto:michelle.rivera@example.com" class="header-mail">michelle.rivera@example.com</a>
+      </div>
+      <p class="header-texts">Follow Us and get a chance to win 80% off</p>
+      <div class="header-social">
+        <p class="header-follow">Follow Us :</p>
+        <a href="#"><img src="./img/inst-icon-1.svg" alt="insta"></a>
+        <a href="#"><img src="./img/youtub-icon-1.svg" alt="youtub"></a>
+        <a href="#"><img src="./img/fb-icon-1.svg" alt="facebook"></a>
+        <a href="#"><img src="./img/twt-icon-1.svg" alt="twitter"></a>
+      </div>
+    </div>
     <div class="container">
       <div class="header-wrap">
         <div class="header-logo">
@@ -38,6 +52,12 @@
             <span class="header-burger-icon"></span>
           </a>
         </div>
+        <div class="header-desc-icon">
+          <p class="header-register">Login / Register</p>
+          <img src="./img/zoom-icon.svg" alt="zoom-icon">
+          <img src="./img/cart-icon.svg" alt="cart-icon">
+          <img src="./img/heart-icon.svg" alt="heart-icon">
+        </div>
       </div>
       <nav class="header-nav-mobile">
         <a href="#" class="header-nav-item">Home</a>
@@ -50,16 +70,19 @@
   <main class="main">
     <div class="container">
       <div class="hero">
-        <div class="hero-content">
-          <h5 class="hero-subtitle">SUMMER 2020</h5>
-          <h1 class="hero-title">NEW COLLECTION</h1>
-          <h4 class="hero-text">We know how large objects will act, but things on a small scale.</h4>
-          <button class="hero-btn button">SHOP NOW</button>
+        <div class="hero-wrap">
+          <div class="hero-content">
+            <h5 class="hero-subtitle">SUMMER 2020</h5>
+            <h1 class="hero-title">NEW COLLECTION</h1>
+            <h4 class="hero-text">We know how large objects will act, but things on a small scale.</h4>
+            <button class="hero-btn button">SHOP NOW</button>
+          </div>
+          <picture>
+            <source media="(min-width:1024px)" srcset="./img/hero-img-desc1.png">
+            <source media="(min-width:560px)" srcset="./img/hero-img-desc.png">
+            <img class="hero-img" src="./img/hero-img-mob.png" alt="red-haired girl">
+          </picture>
         </div>
-        <picture>
-          <source media="(min-width:640px)" srcset="./img/hero-img-desc.png">
-          <img class="hero-img" src="./img/hero-img-mob.png" alt="red-haired girl">
-        </picture>
       </div>
       <div class="sponsor">
         <picture class="sponsor-pic-1">
@@ -88,7 +111,7 @@
         </picture>
       </div>
       <div class="shop">
-        <div class="shop-cart">
+        <div class="shop-cart shop-one">
           <picture class="shop-cart-img">
             <source media="(min-width:780px)" srcset="./img/shopcarts-desc-1.jpg">
             <img src="./img/shopcarts-1.jpg" alt="shop">
@@ -98,7 +121,7 @@
             <button class="shop-cart-btn button">EXPLORE ITEMS</button>
           </div>
         </div>
-        <div class="shop-cart">
+        <div class="shop-cart shop-two">
           <picture class="shop-cart-img">
             <source media="(min-width:780px)" srcset="./img/shopcarts-desc-2.jpg">
             <img src="./img/shopcarts-2.jpg" alt="shop">
@@ -108,7 +131,7 @@
             <button class="shop-cart-btn button">EXPLORE ITEMS</button>
           </div>
         </div>
-        <div class="shop-cart">
+        <div class="shop-cart shop-three">
           <picture class="shop-cart-img">
             <source media="(min-width:780px)" srcset="./img/shopcarts-desc-3.jpg">
             <img src="./img/shopcarts-3.jpg" alt="shop">
@@ -241,51 +264,55 @@
     </div><!-- container -->
     <div class="social">
       <h3 class="social-title">Bandage</h3>
-      <img src="./img/fb-icon.svg" alt="facebook" class="social-icon">
-      <img src="./img/inst-icon.svg" alt="instagram" class="social-icon">
-      <img src="./img/twt-icon.svg" alt="twitter" class="social-icon">
+      <div class="social-wrap">
+        <img src="./img/fb-icon.svg" alt="facebook" class="social-icon">
+        <img src="./img/inst-icon.svg" alt="instagram" class="social-icon">
+        <img src="./img/twt-icon.svg" alt="twitter" class="social-icon">
+      </div>
     </div>
   </main>
   <footer class="footer">
-    <div class="footer-wrap">
-      <div class="footer-links">
-        <h5 class="footer-links-title">Company Info</h5>
-        <a href="#" class="footer-links-item">About Us</a>
-        <a href="#" class="footer-links-item">Carrier</a>
-        <a href="#" class="footer-links-item">We are hiring</a>
-        <a href="#" class="footer-links-item">Blog</a>
+    <div class="container">
+      <div class="footer-wrap">
+        <div class="footer-links">
+          <h5 class="footer-links-title">Company Info</h5>
+          <a href="#" class="footer-links-item">About Us</a>
+          <a href="#" class="footer-links-item">Carrier</a>
+          <a href="#" class="footer-links-item">We are hiring</a>
+          <a href="#" class="footer-links-item">Blog</a>
+        </div>
+        <div class="footer-links">
+          <h5 class="footer-links-title">Legal</h5>
+          <a href="#" class="footer-links-item">About Us</a>
+          <a href="#" class="footer-links-item">Carrier</a>
+          <a href="#" class="footer-links-item">We are hiring</a>
+          <a href="#" class="footer-links-item">Blog</a>
+        </div>
+        <div class="footer-links">
+          <h5 class="footer-links-title">Features</h5>
+          <a href="#" class="footer-links-item">Business Marketing</a>
+          <a href="#" class="footer-links-item">User Analytic</a>
+          <a href="#" class="footer-links-item">Live Chat</a>
+          <a href="#" class="footer-links-item">Unlimited Support</a>
+        </div>
+        <div class="footer-links">
+          <h5 class="footer-links-title">Resources</h5>
+          <a href="#" class="footer-links-item">IOS & Android</a>
+          <a href="#" class="footer-links-item">Watch a Demo</a>
+          <a href="#" class="footer-links-item">Customers</a>
+          <a href="#" class="footer-links-item">API</a>
+        </div>
+        <div class="footer-links">
+          <h5 class="footer-links-title">Get In Touch</h5>
+          <form class="footer-form">
+            <input class="footer-input" type="text" placeholder="Your Email">
+            <input class="footer-btn" type="button" value="Subscribe">
+          </form>
+          <p class="footer-links-item">Lore imp sum dolor Amit</p>
+        </div>
       </div>
-      <div class="footer-links">
-        <h5 class="footer-links-title">Legal</h5>
-        <a href="#" class="footer-links-item">About Us</a>
-        <a href="#" class="footer-links-item">Carrier</a>
-        <a href="#" class="footer-links-item">We are hiring</a>
-        <a href="#" class="footer-links-item">Blog</a>
-      </div>
-      <div class="footer-links">
-        <h5 class="footer-links-title">Features</h5>
-        <a href="#" class="footer-links-item">Business Marketing</a>
-        <a href="#" class="footer-links-item">User Analytic</a>
-        <a href="#" class="footer-links-item">Live Chat</a>
-        <a href="#" class="footer-links-item">Unlimited Support</a>
-      </div>
-      <div class="footer-links">
-        <h5 class="footer-links-title">Resources</h5>
-        <a href="#" class="footer-links-item">IOS & Android</a>
-        <a href="#" class="footer-links-item">Watch a Demo</a>
-        <a href="#" class="footer-links-item">Customers</a>
-        <a href="#" class="footer-links-item">API</a>
-      </div>
-      <div class="footer-links">
-        <h5 class="footer-links-title">Get In Touch</h5>
-        <form class="footer-form">
-          <input class="footer-input" type="text" placeholder="Your Email">
-          <input class="footer-btn" type="button" value="Subscribe">
-        </form>
-        <p class="footer-links-item">Lore imp sum dolor Amit</p>
-      </div>
+      <p class="footer-text">Made With Love By Finland All Right Reserved</p>
     </div>
-    <p class="footer-text">Made With Love By Finland All Right Reserved</p>
   </footer>
 </body>
 
