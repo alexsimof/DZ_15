@@ -1,0 +1,644 @@
+@import "normalize"
+
+*
+  box-sizing: border-box
+
+$title: #252B42
+$second-text: #737373
+$third-text: #23A6F0
+
+@mixin btn-text
+  color: #FFF
+  font-family: 'Montserrat', sans-serif
+  font-size: 14px
+  font-style: normal
+  font-weight: 700
+  line-height: 22px
+  letter-spacing: 0.2px
+
+//
+
+body
+  font-family: 'Montserrat', sans-serif
+  font-style: normal
+  font-size: 14px
+  font-weight: 700
+  line-height: 22px
+  letter-spacing: 0.2px
+
+h1
+  color: $title
+  font-size: 58px
+  font-weight: 800
+  line-height: 80px
+  letter-spacing: 0.2px
+
+h2
+  color: $title
+  font-size: 40px
+  font-weight: 700
+  line-height: 50px
+  letter-spacing: 0.2px
+
+h3
+  color: $title
+  font-size: 24px
+  font-weight: 700
+  line-height: 32px
+  letter-spacing: 0.1px
+
+h4
+  color: $title
+  font-size: 20px
+  font-weight: 500
+  line-height: 30px
+  letter-spacing: 0.2px
+
+h5
+  color: $title
+  font-size: 16px
+  font-style: normal
+  font-weight: 700
+  line-height: 24px
+  letter-spacing: 0.1px
+
+h6
+  color: $title
+  font-size: 14px
+  font-weight: 600
+  line-height: 24px
+  letter-spacing: 0.2px
+
+.container
+  max-width: 1440px
+  width: 95%
+  margin: 0 auto
+
+.header
+  &-panel
+    display: none
+
+  &-wrap
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 23px 35px
+    background: #fff
+    z-index: 2
+  &-img
+    display: block
+  &-menu
+    display: none
+  &-icon
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    gap: 25px
+  &-burger
+    display: block
+    width: 25px
+    height: 25px
+  &-desc-icon
+    display: none
+  &-burger-icon
+    position: relative
+    display: block
+    width: 22px
+    height: 2px
+    background: #000
+    top: 12px
+    &::before
+      content: ''
+      position: absolute
+      width: 25px
+      height: 2px
+      top: -8px
+      right: 0
+      background: #000
+    &::after
+      content: ''
+      position: absolute
+      width: 19px
+      height: 2px
+      top: 8px
+      right: 0
+      background: #000
+  &-nav
+    &-mobile
+      position: relative
+      height: 0px
+      text-align: center
+      padding: 0
+      transform: translateY(-460px)
+      background: #fff
+      z-index: 1
+      transition: 0.3s
+    &-item
+      display: block
+      text-decoration: none
+      color: $second-text
+      font-size: 30px
+      font-weight: 400
+      line-height: 45px
+      letter-spacing: 0.2px
+      &:not(:last-child)
+        margin-bottom: 30px
+
+.activ
+  height: 458px
+  transform: translateY(0px)
+  padding: 80px 0 96px
+
+.hero
+  &-wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    border-radius: 20px
+    background: linear-gradient(90deg, #96E9FB 0%, #ABECD6 100%)
+    padding-top: 80px
+    overflow: hidden
+    gap: 66px
+    margin-bottom: 110px
+  &-content
+    display: flex
+    align-items: center
+    flex-direction: column
+  &-subtitle
+    color: $third-text
+    text-align: center
+    margin: 0 0 33px
+  &-title
+    max-width: 260px
+    font-size: 40px
+    font-weight: 700
+    line-height: 50px
+    text-align: center
+    margin: 0 0 33px
+  &-text
+    max-width: 256px
+    text-align: center
+    color: $second-text
+    margin: 0 0 33px
+  &-img
+    display: block
+  &-btn
+    background: $third-text
+
+.button
+  text-transform: uppercase
+  padding: 15px 40px
+  border-radius: 5px
+  border: 0
+  color: #fff
+
+.sponsor
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  gap: 60px
+  padding: 50px 0
+  margin-bottom: 110px
+
+.shop
+  display: grid
+  grid-template-rows: 1fr
+  grid-template-columns: 3fr
+  gap: 15px
+  padding: 0 24px
+
+  &-cart
+    position: relative
+    align-self: center
+    justify-self: center
+    &-img img
+      max-width: 557px
+      display: block
+    &-content
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 344px
+      height: 238px
+      background: rgba(45, 139, 192, 0.75)
+      padding: 60px 0 36px 40px
+    &-title
+      max-width: 195px
+      color: #fff
+      margin: 0 0 25px
+    &-btn
+      border: 1px solid #fff
+      background: transparent
+      @include btn-text
+
+.product
+  text-align: center
+  padding: 80px 0
+  &-title
+    max-width: 200px
+    text-align: center
+    margin: 10px auto
+
+  &-text
+    max-width: 260px
+    color: $second-text
+    text-align: center
+    margin: 0 auto
+  &-wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 65px
+    margin-top: 56px
+  &-cart
+    text-align: center
+    &-title
+      margin: 25px 0 10px
+    &-text
+      color: $second-text
+      margin: 10px 0
+  &-btn
+    color: $third-text
+    border-radius: 5px
+    border: 1px solid $third-text
+    background: transparent
+    margin-top: 96px
+
+.featured
+  padding: 80px 0
+  &-content
+    max-width: 333px
+    padding-left: 46px
+  &-subtitle
+    color: $third-text
+  &-title
+    margin: 16px 0
+  &-text
+    color: $second-text
+    margin-bottom: 50px
+
+.best
+  text-align: center
+  padding: 80px 0
+  &-subtitle
+    color: $second-text
+    margin: 0
+  &-title
+    margin: 10px 0
+  &-text
+    max-width: 200px
+    color: $second-text
+    margin: 0 auto
+  &-wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 30px
+    margin-top: 80px
+  &-cart
+    text-align: center
+    padding: 35px 40px
+    &-title
+      margin: 20px 0
+    &-text
+      max-width: 220px
+
+.posts
+  text-align: center
+  padding: 80px 0 20px
+  &-subtitle
+    color: $third-text
+    margin: 0
+  &-title
+    margin: 10px 0 80px
+  &-cart-box
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 30px
+  &-cart
+    text-align: left
+    max-width: 330px
+    background: #fff
+    box-shadow: 0px 1px 1px #737373
+    &-content
+      padding: 25px 25px 35px
+    &-img
+      display: block
+    &-cat
+      color: $second-text
+      margin-right: 15px
+    &-first
+      color: #8EC2F2
+    &-title
+      font-weight: 600
+      margin: 10px 0
+    &-attr
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin: 25px 0
+    &-date
+      position: relative
+      display: inline-block
+      padding-left: 21px
+      color: $second-text
+      font-weight: 600
+      &::before
+        content: ''
+        position: absolute
+        top: 2px
+        left: 0
+        width: 16px
+        height: 16px
+        background: url(../img/icon-clock.svg) no-repeat
+    &-comm
+      position: relative
+      display: inline-block
+      text-align: right
+      padding-left: 21px
+      color: $second-text
+      font-weight: 600
+      &::before
+        content: ''
+        position: absolute
+        top: 2px
+        left: 0
+        width: 16px
+        height: 15px
+        background: url(../img/icon-gr.svg) no-repeat
+    &-link
+      position: relative
+      text-decoration: none
+      font-weight: 700
+      color: $second-text
+      padding-right: 19px
+      &::after
+        content: ''
+        position: absolute
+        width: 9px
+        height: 16px
+        top: 2px
+        right: 0
+        background: url(../img/icon-arrow.svg) no-repeat
+
+.social
+  padding: 45px
+  background: #FAFAFA
+  &-title
+    margin-top: 0
+  &-icon:not(:last-child)
+    margin-right: 20px
+
+.footer
+  padding: 70px 46px 0
+  &-wrap
+    display: flex
+    flex-direction: column
+    gap: 30px
+  &-links
+    &-title
+      margin: 0 0 20px
+    &-item
+      display: block
+      text-decoration: none
+      color: $second-text
+      margin-bottom: 10px
+
+  &-form
+    position: relative
+  &-input
+    width: 100%
+    padding: 15px 146px 15px 20px
+    border: 0
+    border-radius: 5px
+    border: 1px solid #E6E6E6
+    background: #F9F9F9
+  &-btn
+    position: absolute
+    right: 0
+    top: 0
+    border: 0
+    border-radius: 0px 5px 5px 0px
+    color: #fff
+    padding: 15px 22px
+    background: $third-text
+
+  &-text
+    max-width: 205px
+    padding: 25px 0
+    text-align: center
+    margin: 0 auto
+    color: $second-text
+
+//
+
+@media screen and (min-width:780px)
+  .sponsor
+    flex-direction: row
+    gap: 125px
+    flex-wrap: wrap
+  .product-wrap
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+  .featured-wrap
+    display: flex
+    align-items: center
+    flex-direction: row-reverse
+    justify-content: flex-end
+  .best-wrap
+    justify-content: center
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 0
+  .best-cart
+    padding: 25px 15px
+  .posts-cart-box
+    flex-direction: row
+  .social
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-title
+      margin-bottom: 0
+    &-wrap
+      display: flex
+      align-items: center
+  .footer-wrap
+    justify-content: center
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 90px
+
+@media screen and (min-width: 1024px)
+  .header
+    &-panel
+      display: flex
+      align-items: center
+      justify-content: space-between
+      background: #252B42
+      padding: 10px 24px 5px
+    &-social
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 10px
+      img
+        display: block
+    a
+      text-decoration: none
+    &-phone, &-mail, &-follow, &-texts
+      color: #fff
+    &-phone
+      position: relative
+      margin-right: 20px
+      padding-left: 23px
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 17px
+        height: 17px
+        background: url(../img/phone-icon.svg) no-repeat
+    &-mail
+      position: relative
+      padding-left: 23px
+      &:before
+        content: ''
+        position: absolute
+        top: 1px
+        left: 0
+        width: 18px
+        height: 17px
+        background: url(../img/mail-icon.svg) no-repeat
+
+    &-wrap
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 23px 35px
+      background: #fff
+      z-index: 2
+    &-img
+      display: block
+    &-menu
+      display: block
+      margin-right: auto
+      margin-left: 110px
+    &-nav
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 15px
+      &-item
+        font-size: 14px
+        font-weight: 700
+        &:not(:last-child)
+          margin-bottom: 0
+    &-nav-mobile, &-icon
+      display: none
+    &-desc-icon
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 10px
+    &-register
+      position: relative
+      color: $third-text
+      padding-left: 17px
+      &::before
+        content: ''
+        position: absolute
+        width: 12px
+        height: 12px
+        top: 5px
+        left: 0
+        background: url(../img/login-icon.svg) no-repeat
+
+  .hero
+    &-wrap
+      flex-direction: row
+      justify-content: space-between
+      padding: 0 20px
+      gap: 0
+      overflow: visible
+
+    &-content
+      align-items: flex-start
+    &-title, &-subtitle, &-text
+      text-align: left
+    &-title
+      font-weight: 700
+      tab-size: 58px
+      max-width: 400px
+    &-img
+      max-width: 500px
+  .sponsor
+    gap: 60px
+
+  .featured
+    &-wrap
+      justify-content: center
+    &-content
+      max-width: 600px
+      padding-left: 90px
+    &-text
+      max-width: 350px
+//
+
+@media screen and (min-width: 1200px)
+  .hero
+    &-wrap
+      justify-content: space-between
+      padding-left: 60px
+    &-img
+      max-width: 700px
+  .shop
+    grid-template-rows: 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr
+    overflow: hidden
+    &-one
+      grid-column: 1/2
+      grid-row: 1/3
+    &-two
+      grid-column: 2/3
+      grid-row: 1/2
+    &-three
+      grid-column: 2/3
+      grid-row: 2/3
+    &-cart img
+      max-width: none
+    &-cart
+      align-self: start
+      justify-self: start
+
+  .product
+    &-wrap
+      gap: 10px
+    &-cart img
+      width: 183px
+
+  .best
+    &-wrap
+      gap: 50px
+    &-cart
+      padding: 35px 40px
+//
+
+@media screen and (min-width: 1440px)
+  .hero
+    padding: 0 89px 0 59px
+    &-wrap
+      justify-content: space-between
+      padding-left: 126px
+    &-img
+      max-width: 700px
+      transform: translateX(75px)
+  .sponsor
+    gap: 100px
