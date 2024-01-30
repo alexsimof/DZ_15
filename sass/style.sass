@@ -494,7 +494,28 @@ h6
     &-phone, &-mail, &-follow, &-texts
       color: #fff
     &-phone
+      position: relative
       margin-right: 20px
+      padding-left: 23px
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 17px
+        height: 17px
+        background: url(../img/phone-icon.svg) no-repeat
+    &-mail
+      position: relative
+      padding-left: 23px
+      &:before
+        content: ''
+        position: absolute
+        top: 1px
+        left: 0
+        width: 18px
+        height: 17px
+        background: url(../img/mail-icon.svg) no-repeat
 
     &-wrap
       position: relative

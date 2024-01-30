@@ -912,7 +912,31 @@ h6 {
     color: #fff;
   }
   .header-phone {
+    position: relative;
     margin-right: 20px;
+    padding-left: 23px;
+  }
+  .header-phone:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    background: url(../img/phone-icon.svg) no-repeat;
+  }
+  .header-mail {
+    position: relative;
+    padding-left: 23px;
+  }
+  .header-mail:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 18px;
+    height: 17px;
+    background: url(../img/mail-icon.svg) no-repeat;
   }
   .header-wrap {
     position: relative;
